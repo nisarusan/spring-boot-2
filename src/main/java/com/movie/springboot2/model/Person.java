@@ -1,16 +1,17 @@
 package com.movie.springboot2.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Person {
 
-    String name;
-    int age;
-    char gender;
+    private String name;
+    private LocalDate dob;
+    private char gender;
 
-    public Person(String name, int age, char gender) {
+    public Person(String name, LocalDate dob, char gender) {
         this.name = name;
-        this.age = age;
+        this.dob = dob;
         this.gender = gender;
     }
     public String getName() {
@@ -21,12 +22,12 @@ public class Person {
         this.name = name;
     }
 
-    public int getDob() {
-        return age;
+    public LocalDate getDob() {
+        return dob;
     }
 
-    public void setDob(int age) {
-        this.age = age;
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
     }
 
     public char getGender() {
